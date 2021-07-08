@@ -1,0 +1,2 @@
+rootProject.name = "SendSos"
+include ':app'
