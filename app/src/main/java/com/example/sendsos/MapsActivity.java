@@ -66,27 +66,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
-        locationListener = new LocationListener() {
-            @Override
-            public void onLocationChanged(@NonNull Location location) {
-                latLng = new LatLng(location.getLatitude(), location.getLongitude());
 
-                try {
-                    mMap.addMarker(new MarkerOptions().position(latLng).title("Latitude  :" + latLng.latitude + " longitude " + latLng.longitude));
-                    mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-
-                } catch (SecurityException e) {
-                    e.printStackTrace();
-                }
-
-            }
-        };
-        try {
-            locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, MIN_TIME, MIN_DISTANCE, locationListener);
-        } catch (SecurityException e) {
-            e.printStackTrace();
-        }
     }
 
 }

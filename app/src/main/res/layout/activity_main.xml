@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -12,23 +11,23 @@
         android:id="@+id/number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter phone"
+        android:hint="@string/enter_phone"
         android:inputType="phone"
         android:autofillHints=""
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--    <EditText-->
-    <!--        android:id="@+id/message"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="67dp"-->
-    <!--        android:hint="Enter Message"-->
-    <!--        android:autofillHints="Enter message"-->
-    <!--        android:inputType="textLongMessage"-->
-    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
-    <!--        app:layout_constraintRight_toRightOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+<!--        <EditText-->
+<!--            android:id="@+id/message"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="67dp"-->
+<!--            android:hint="Enter Message"-->
+<!--            android:autofillHints="Enter message"-->
+<!--            android:inputType="textLongMessage"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintRight_toRightOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
     <Button
         android:id="@+id/send"
@@ -36,16 +35,16 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_gravity="center_horizontal"
-        android:onClick="SendAlert"
-        android:text="send alert" />
+        android:onClick="SendSMS"
+        android:text="@string/send_alert" />
 
 
     <Button
-        android:id="@+id/Send2"
+        android:id="@+id/stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="StopAlerts"
-        android:text="send alert"
+        android:onClick="StopAlert"
+        android:text="Stop alert"
         android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>
